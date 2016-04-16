@@ -4,6 +4,7 @@ version = 2.0
 copyright = "Sheeo"
 description = "Names ALL the things"
 author = "Sheeo, EntropyWins"
+url = "https://github.com/JeroenDeDauw/NameAllTheThings"
 icon = "/mods/NameAllTheThings/icon.png"
 enabled = true
 exclusive = false
