@@ -1,0 +1,11 @@
+name = "Name All The Things"
+uid = "e6700640-1198-11c4-9191-0811199c9a67"
+version = 1.1
+copyright = "Sheeo"
+description = "Names ALL the things"
+author = "Sheeo, EntropyWins"
+icon = "/mods/NameAllTheThings/icon.png"
+enabled = true
+exclusive = false
+ui_only = true
+conflicts = {}
