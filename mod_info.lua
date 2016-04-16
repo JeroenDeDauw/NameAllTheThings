@@ -1,6 +1,6 @@
 name = "Name All The Things"
 uid = "e6700640-1198-11c4-9191-0811199c9a67"
-version = 1.1
+version = 2.0
 copyright = "Sheeo"
 description = "Names ALL the things"
 author = "Sheeo, EntropyWins"
