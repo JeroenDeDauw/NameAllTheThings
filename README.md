@@ -10,8 +10,9 @@ These names are visible to you, and to the people you are playing with.
 
 ## Installation
 
-To install, place the "NameAllTheThings" folder into your "Supreme Commander Forged Alliance\Mods" folder.
-If you got an archive, such as a zip, make sure you extraxt it. Placing the zip in the mod folder will not work.
+* Download the [latest version of the mod][download]
+* Extract the zip and rename the directory from `NameAllTheThings-master` to `NameAllTheThings`
+* Place the directory into `Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods`
 
 ## Configuration
 
@@ -45,4 +46,5 @@ Changes by EntropyWins
 Initial version by Sheeo
 
 [FAF]: http://www.faforever.com/
+[download]: https://github.com/JeroenDeDauw/NameAllTheThings/archive/master.zip
 [GitHub]: https://github.com/JeroenDeDauw/NameAllTheThings
