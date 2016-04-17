@@ -26,7 +26,7 @@ also the place where you can file issues, post feature request, and submit patch
 
 ## Release notes
 
-### Version 2.0 - 2016-04-16
+### Version 2.0 - 2016-04-17
 
 Changes by EntropyWins
 

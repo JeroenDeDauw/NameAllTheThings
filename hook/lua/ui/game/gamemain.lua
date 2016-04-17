@@ -1,6 +1,6 @@
 local originalCreateUI = CreateUI 
 local originalOnSelectionChanged = OnSelectionChanged
-local UpdateAllUnits = import('/mods/NameAllTheThings/allunits.lua').UpdateAllUnits
+local UpdateAllUnits = import('/mods/NameAllTheThings/modules/allunits.lua').UpdateAllUnits
 local NameUnits = import('/mods/NameAllTheThings/modules/nameunits.lua').NameUnits
 
 function OnSelectionChanged(oldSelection, newSelection, added, removed)
