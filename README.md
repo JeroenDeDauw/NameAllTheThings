@@ -10,9 +10,9 @@ These names are visible to you, and to the people you are playing with.
 
 ## Installation
 
-1. Download the [latest version of the mod][download]
-2. Extract the zip and rename the directory from `NameAllTheThings-master` to `NameAllTheThings`
-3. Place the directory into `Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods`
+* Download the [latest version of the mod][download]
+* Extract the zip and rename the directory from `NameAllTheThings-master` to `NameAllTheThings`
+* Place the directory into `Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods`
 
 ## Configuration
 
