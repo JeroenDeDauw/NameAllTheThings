@@ -28,8 +28,6 @@ local names = {
 local uefNames = {
 	'Space Nazy',
 	'Space Nazy',
-	'Space Nazy',
-	'Space Nazy',
 	'Space Nazy'
 }
 
