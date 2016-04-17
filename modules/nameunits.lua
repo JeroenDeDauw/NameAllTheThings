@@ -75,58 +75,58 @@ local numIdleWorker = table.getn(idleWorkerPrefixes)
 local numIdleNonWorker = table.getn(idleNonWorkerPrefixes)
 local numStunned = table.getn(stunnedPrefixes)
 
-for _,v in ipairs(names) do 
-    table.insert(uefNames, v)
+for _,v in ipairs(names) do
+	table.insert(uefNames, v)
 end
 
 local numUefNames = table.getn(uefNames)
 
 function NameUnits()
-  while true do
-	  WaitSeconds(1)
-	  for _,u in GetAllUnits() do
-		  if not u:IsInCategory("STRUCTURE") and not u:IsInCategory("COMMAND") then
-			NameUnit(u)
-		  end
-	  end
-  end
+	while true do
+		WaitSeconds(1)
+		for _,u in GetAllUnits() do
+			if not u:IsInCategory("STRUCTURE") and not u:IsInCategory("COMMAND") then
+				NameUnit(u)
+			end
+		end
+	end
 end
 
 function NameUnit(u)
-  name = MakeUnitName(u)
+	local name = MakeUnitName(u)
 
-  if u:GetCustomName(nil) != name then
-	  u:SetCustomName(name)
-  end
+	if u:GetCustomName(nil) != name then
+		u:SetCustomName(name)
+	end
 end
 
 function MakeUnitName(u)
-  local entityId = tonumber(u:GetEntityId()) + randomOffset
-  local name = GetHealthPrefix((u:GetMaxHealth() == 0) and 1 or (u:GetHealth() / u:GetMaxHealth()))
-  
-  if u:IsStunned() then
-	  name = name .. " " .. stunnedPrefixes[modulo(entityId, numStunned) + 1]
-  end
-  
-  if u:IsInCategory('AIR') and u:GetFuelRatio() > -1 and u:GetFuelRatio() < .2 then
-	  name = name .. " " .. outOfFualAdjective
-  end
+	local entityId = tonumber(u:GetEntityId()) + randomOffset
+	local name = GetHealthPrefix((u:GetMaxHealth() == 0) and 1 or (u:GetHealth() / u:GetMaxHealth()))
 
-  if u:IsIdle() then
-	if u:IsInCategory('ENGINEER') then
-		name = name .. " " .. idleWorkerPrefixes[modulo(entityId, numIdleWorker) + 1]
-	else 
-		name = name .. " " .. idleNonWorkerPrefixes[modulo(entityId, numIdleNonWorker) + 1]
+	if u:IsStunned() then
+		name = name .. " " .. stunnedPrefixes[modulo(entityId, numStunned) + 1]
 	end
-  end
-  
-  if u:IsInCategory('UEF') then
-    name = name .. " " .. uefNames[modulo(entityId, numUefNames) + 1]
-  else
-	name = name .. " " .. names[modulo(entityId, numNames) + 1]
-  end
-  
-  return name
+
+	if u:IsInCategory('AIR') and u:GetFuelRatio() > -1 and u:GetFuelRatio() < .2 then
+		name = name .. " " .. outOfFualAdjective
+	end
+
+	if u:IsIdle() then
+		if u:IsInCategory('ENGINEER') then
+			name = name .. " " .. idleWorkerPrefixes[modulo(entityId, numIdleWorker) + 1]
+		else
+			name = name .. " " .. idleNonWorkerPrefixes[modulo(entityId, numIdleNonWorker) + 1]
+		end
+	end
+
+	if u:IsInCategory('UEF') then
+		name = name .. " " .. uefNames[modulo(entityId, numUefNames) + 1]
+	else
+		name = name .. " " .. names[modulo(entityId, numNames) + 1]
+	end
+
+	return name
 end
 
 function modulo(a,b)
