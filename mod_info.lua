@@ -1,8 +1,8 @@
-name = "Name All The Things"
+name = "Name All The Things (v2.0.0)"
 uid = "e6700640-1198-11c4-9191-0811199c9a67"
 version = 2.0
 copyright = "Sheeo"
-description = "Names ALL the things"
+description = "Automatically names your units. See README.md in mods/NameAllTheThings for configuration instructions."
 author = "Sheeo, EntropyWins"
 url = "https://github.com/JeroenDeDauw/NameAllTheThings"
 icon = "/mods/NameAllTheThings/icon.png"

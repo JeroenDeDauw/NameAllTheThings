@@ -1,4 +1,4 @@
-local oldSelection = nil
+local oldSelection
 local isAutoSelection = false
 local allUnits = {}
 local lastFocusedArmy = 0
@@ -29,19 +29,19 @@ end
 
 function UpdateAllUnits()
 	if GetFocusArmy() != lastFocusedArmy then
-		Reset()
-		lastFocusedArmy = GetFocusArmy()
+	Reset()
+	lastFocusedArmy = GetFocusArmy()
 	end
 
 	AddSelection()
-	
+
 	-- Add focused (building or assisting)
 	for _, unit in allUnits do
 		if not unit:IsDead() and unit:GetFocus() and not unit:GetFocus():IsDead() then
 			allUnits[unit:GetFocus():GetEntityId()] = unit:GetFocus()
 		end
 	end
-	
+
 	-- Remove dead
 	for entityid, unit in allUnits do
 		if unit:IsDead() then
