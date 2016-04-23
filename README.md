@@ -4,7 +4,9 @@ A naming mod for [Supreme Commander: Forged Alliance Forever][FAF].
 
 <img align="right" src="icon.PNG">
 
-This mod automatically sets names for your units, which can change based on their status. For instance, damage can cause a unit to be labeled "angry", while idle units can be labeled "lazy" or "useless". These names are visible to you, and to the people you are playing with.
+This mod automatically sets names for your units, which can change based on their status. For
+instance, damage can cause a unit to be labeled "angry", while idle units can be labeled "lazy"
+or "useless". These names are visible to you, and to the people you are playing with.
 
 ## Installation
 

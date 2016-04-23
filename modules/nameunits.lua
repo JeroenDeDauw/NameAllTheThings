@@ -73,7 +73,7 @@ local numIdleWorker = table.getn(idleWorkerPrefixes)
 local numIdleNonWorker = table.getn(idleNonWorkerPrefixes)
 local numStunned = table.getn(stunnedPrefixes)
 
-for _,v in ipairs(names) do 
+for _,v in ipairs(names) do
     table.insert(uefNames, v)
 end
 
@@ -91,7 +91,7 @@ function NameUnits()
 end
 
 function NameUnit(u)
-  name = MakeUnitName(u)
+  local name = MakeUnitName(u)
 
   if u:GetCustomName(nil) != name then
 	  u:SetCustomName(name)
@@ -101,11 +101,11 @@ end
 function MakeUnitName(u)
   local entityId = tonumber(u:GetEntityId()) + randomOffset
   local name = GetHealthPrefix((u:GetMaxHealth() == 0) and 1 or (u:GetHealth() / u:GetMaxHealth()))
-  
+
   if u:IsStunned() then
 	  name = name .. " " .. stunnedPrefixes[modulo(entityId, numStunned) + 1]
   end
-  
+
   if u:IsInCategory('AIR') and u:GetFuelRatio() > -1 and u:GetFuelRatio() < .2 then
 	  name = name .. " " .. outOfFualAdjective
   end
@@ -113,17 +113,17 @@ function MakeUnitName(u)
   if u:IsIdle() then
 	if u:IsInCategory('ENGINEER') then
 		name = name .. " " .. idleWorkerPrefixes[modulo(entityId, numIdleWorker) + 1]
-	else 
+	else
 		name = name .. " " .. idleNonWorkerPrefixes[modulo(entityId, numIdleNonWorker) + 1]
 	end
   end
-  
+
   if u:IsInCategory('UEF') then
     name = name .. " " .. uefNames[modulo(entityId, numUefNames) + 1]
   else
 	name = name .. " " .. names[modulo(entityId, numNames) + 1]
   end
-  
+
   return name
 end
 
