@@ -68,6 +68,8 @@ local minorDamageOpener = 'Annoyed'
 local mediumDamageOpener = 'Angry'
 local highDamageOpener = 'Raging'
 
+local maxUnitNames = 500
+
 local numNames = table.getn(names)
 local numIdleWorker = table.getn(idleWorkerPrefixes)
 local numIdleNonWorker = table.getn(idleNonWorkerPrefixes)
@@ -82,12 +84,19 @@ local numUefNames = table.getn(uefNames)
 function NameUnits()
   while true do
 	  WaitSeconds(1)
-	  for _,u in GetAllUnits() do
-		  if not u:IsInCategory("STRUCTURE") and not u:IsInCategory("COMMAND") then
-			NameUnit(u)
-		  end
-	  end
+	  NameUnitsNow()
   end
+end
+
+function NameUnitsNow()
+	local nameCount = 0
+	for _,u in GetAllUnits() do
+		if not u:IsInCategory("STRUCTURE") and not u:IsInCategory("COMMAND") then
+			NameUnit(u)
+			nameCount = nameCount + 1
+			if nameCount >= maxUnitNames then break end
+		end
+	end
 end
 
 function NameUnit(u)

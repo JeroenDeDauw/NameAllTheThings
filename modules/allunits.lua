@@ -3,21 +3,6 @@ local isAutoSelection = false
 local allUnits = {}
 local lastFocusedArmy = 0
 
-function AddSelection()
-	for _, unit in (GetSelectedUnits() or {}) do
-		allUnits[unit:GetEntityId()] = unit
-	end
-end
-
-function Reset()
-	local currentlySelected = GetSelectedUnits() or {}
-	isAutoSelection = true
-	UISelectionByCategory("MOBILE+LAND", false, false, false, false)
-	AddSelection()
-	SelectUnits(currentlySelected)
-	isAutoSelection = false
-end
-
 function UpdateAllUnits()
 	if GetFocusArmy() != lastFocusedArmy then
 		Reset()
@@ -38,6 +23,21 @@ function UpdateAllUnits()
 		if unit:IsDead() then
 			allUnits[entityid] = nil
 		end
+	end
+end
+
+function Reset()
+	local currentlySelected = GetSelectedUnits() or {}
+	isAutoSelection = true
+	UISelectionByCategory("MOBILE+LAND", false, false, false, false)
+	AddSelection()
+	SelectUnits(currentlySelected)
+	isAutoSelection = false
+end
+
+function AddSelection()
+	for _, unit in (GetSelectedUnits() or {}) do
+		allUnits[unit:GetEntityId()] = unit
 	end
 end
 
