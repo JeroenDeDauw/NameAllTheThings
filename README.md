@@ -8,6 +8,16 @@ This mod automatically sets names for your units, which can change based on thei
 instance, damage can cause a unit to be labeled "angry", while idle units can be labeled "lazy"
 or "useless". These names are visible to you, and to the people you are playing with.
 
+## Features
+
+* Units get a randomly assigned name
+* The list of names can be configured by changing the list in the mod
+* Idle units will be "bored" and get one of several bored prefixes (different for engineers and non-engineers)
+* Units get a prefix indicating their health, getting progressively more angry as health decreases
+* Out of fuel air units will be "hungry"
+* Option for extra names that only get used for UEF units
+* High probability of LOL or RAGE from other players
+
 ## Installation
 
 * Download the [latest version of the mod][download]
@@ -16,7 +26,7 @@ or "useless". These names are visible to you, and to the people you are playing 
 
 ## Configuration
 
-You can configure the names that show up by editting the text at the top of `modules\nameunits.lua`.
+You can configure the names that show up by editing the text at the top of `modules\nameunits.lua`.
 The names cannot contain the quotation marks placed in front and after them and need to be followed
 by a comma, except for the last name in a list, which should not be followed by a comma.
 

@@ -61,14 +61,12 @@ local stunnedPrefixes = {
 	'Unconscious'
 }
 
-local outOfFualAdjective = 'hungry'
+local outOfFuelAdjective = 'Hungry'
 
 local highHealthOpener = 'Such a'
 local minorDamageOpener = 'Annoyed'
 local mediumDamageOpener = 'Angry'
 local highDamageOpener = 'Raging'
-
-local maxUnitNames = 500
 
 local numNames = table.getn(names)
 local numIdleWorker = table.getn(idleWorkerPrefixes)
@@ -89,12 +87,9 @@ function NameUnits()
 end
 
 function NameUnitsNow()
-	local nameCount = 0
 	for _,u in GetAllUnits() do
 		if not u:IsInCategory("STRUCTURE") and not u:IsInCategory("COMMAND") then
 			NameUnit(u)
-			nameCount = nameCount + 1
-			if nameCount >= maxUnitNames then break end
 		end
 	end
 end
@@ -116,7 +111,7 @@ function MakeUnitName(u)
   end
 
   if u:IsInCategory('AIR') and u:GetFuelRatio() > -1 and u:GetFuelRatio() < .2 then
-	  name = name .. " " .. outOfFualAdjective
+	  name = name .. " " .. outOfFuelAdjective
   end
 
   if u:IsIdle() then
