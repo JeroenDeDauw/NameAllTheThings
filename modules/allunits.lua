@@ -1,4 +1,3 @@
-local oldSelection = nil
 local isAutoSelection = false
 local allUnits = {}
 local lastFocusedArmy = 0
