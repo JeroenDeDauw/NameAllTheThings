@@ -18,6 +18,7 @@ local names = {
 	'TH0R',
 	'Evil Colleagues',
 	'Photon',
+	'Gyle',
 	'unit'
 }
 
