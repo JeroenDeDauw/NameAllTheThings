@@ -2,26 +2,22 @@ local GetAllUnits = import('/mods/NameAllTheThings/modules/allunits.lua').GetAll
 local randomOffset = math.floor(Random(0,10))
 
 local names = {
-	'Figaro',
-	'Morgan',
 	'Entropy',
 	'Figaro',
-	'Morgan',
-	'Entropy',
-	'MaxwellsDemon',
-	'BrownianRatchet',
 	'Juice',
-	'Nose',
-	'Horse',
-	'Kevin',
+	'Jammer',
+	'Garry',
+	'Jip',
+	'Astr0x',
+	'DDDX',
+	'Tas',
+	'Cascade',
+	'Wasser',
+	'Chloe',
+	'Selvids',
+	'TH0R',
 	'Evil Colleagues',
 	'Photon',
-	'Phelom',
-	'Vanguard',
-	'MistakeNot',
-	'WoodenNipple',
-	'Spoon',
-	'Phantom',
 	'unit'
 }
 
@@ -34,8 +30,20 @@ local uefNames = {
 local idleWorkerPrefixes = {
 	'Bored',
 	'Lazy',
-	'Useless',
 	'Slacking',
+	
+	'Bored',
+	'Lazy',
+	'Slacking',
+	
+	'Unproductive',
+	'Idle',
+	'Useless',
+	'Worthless',
+	'Incompetent',
+	'Gen Z',
+	'Socialist',
+	'Pretending to work',
 	'"Who needs engies anyway"',
 	'"I\'m le tired"',
 	'"Making lunch"',
@@ -48,11 +56,24 @@ local idleNonWorkerPrefixes = {
 	'Lazy',
 	'Useless',
 	'Slacking',
-	'Tired',
+	
+	'Bored',
+	'Lazy',
+	'Useless',
+	'Slacking',
+	
+	'Bored',
+	'Lazy',
+	'Useless',
+	'Slacking',
+	
+	'Idle',
+	'Gen Z',
+	'Pacifist',
+	'"Fantasizing about warcrimes"',
+	'"Watching for targets"',
 	'"Lunchbreak"',
-	'"Eating dinner"',
-	'"<3 defence budget"',
-	'"Not earning enough"'
+	'"Eating dinner"'
 }
 
 local stunnedPrefixes = {
