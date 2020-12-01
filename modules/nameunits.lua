@@ -6,7 +6,7 @@ local names = {
 	'Figaro',
 	'Juice',
 	'Jammer',
-	'Garry',
+	'GaryTheGoat',
 	'Jip',
 	'Astr0x',
 	'DDDX',
