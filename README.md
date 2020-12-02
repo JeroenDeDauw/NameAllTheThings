@@ -37,6 +37,13 @@ also the place where you can file issues, post feature request, and submit patch
 
 ## Release notes
 
+### Version 2.1 - 2020-12-02
+
+Changes by EntropyWins
+
+* Updated names
+* Updated idle messages
+
 ### Version 2.0 - 2016-04-30
 
 Changes by EntropyWins
