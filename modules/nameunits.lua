@@ -16,6 +16,7 @@ local names = {
 	'Chloe',
 	'Selvids',
 	'TH0R',
+	'Morgan',
 	'Evil Colleagues',
 	'Photon',
 	'Gyle',
